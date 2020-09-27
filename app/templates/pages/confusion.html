@@ -1,0 +1,23 @@
+
+{% extends "layouts/default.html" %}
+
+{% block title %} Charts {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+<div class="row">
+
+ <img src="/conf" align="middle" />
+
+</div>
+<br>
+<br>
+<a class="btn btn-primary" href="confusion.html" role="button">Confusion Matrix</a>
+
+{% endblock content %}
+{% block javascripts %}
+  <script src="/static/assets/js/shared/chart.js"></script>
+{% endblock javascripts %}

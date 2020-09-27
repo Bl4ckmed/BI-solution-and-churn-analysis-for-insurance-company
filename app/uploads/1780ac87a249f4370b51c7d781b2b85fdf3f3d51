@@ -1,0 +1,20 @@
+Avancement kdim + : 
+
+-création de la partie front end de l'application (design de la plateforme) 
+-configuration de la plateforme : création d'une database sqlite , configurer la sécurité des données des utilisateurs(hash functions etc)
+                                  conception et implementation d'une structure(design pattern) pour le projet point de vue développement pour le rendre scalable(manaarech chmaneha scalable en français) 
+-création des parties de la plateforme en relation avec l'utilisateur (register , login , données personnelles) 
+-Integré les données input modflow avec le profile de l'utilisateur (afin de créer un historique pour chaque utilisateur )
+çad : 
+   user profile : mail , password etc 
+                  données modflow utilisées
+
+-changement dans les implementations en python des packages modflow nécéssaires pour les rendre convenables à integrer le site web 
+-integrer les scripts modflow dans le site web 
+-création des apis  afin de les afficher sous forme de dashboard , chaque (plot,courbe,manaarech chesemha) est transformée en api présentable 
+sur un page web (cela est rendu possible en utilisant un module de python qui fait la liaison entre matplotlib et flask) 
+
+reste à faire : 
+-utiliser les apis crées dans la partie front end et les integrer avec notre design. 
+-faire un lien entre l'éxecution du script modflow qui se fait maintenant en utilisant comme input des fichiers locaux et les données modflow données relatives à l'utilisateur 
+çàd implémenter le code qui sert à récupérer les données modflow à partir de la base de données 

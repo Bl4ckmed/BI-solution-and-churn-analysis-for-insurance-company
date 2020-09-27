@@ -1,0 +1,56 @@
+
+{% extends "layouts/default.html" %}
+
+{% block title %} UI Elements {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+            <div class="row">
+              <div class="col-md-6 d-flex align-items-stretch grid-margin">
+                <div class="row flex-grow">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        
+                        <form class="forms-sample">
+							 
+                        <div class="separator-shadow-bottom bottom-margin">
+                          <img alt="" src="/static/images/shadow-separator-wide-bottom.png">
+	<div class="upload-container">
+	
+		<form id="upload" method="post" action="/upload" enctype="multipart/form-data">
+			<div id="drop">
+				
+				
+               
+				
+			</div>
+
+			
+		</form>
+	</div>
+	<div class="upload-container">
+	<h3>Upload Files</h3>
+	   <form id="upload" action = "/upload" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" multiple />  
+        <a class="btn btn-primary" href="inputstatistique.html" role="button">Submit</a> 
+       </form>  
+			
+		                </form>
+						<ul>
+			</ul>
+	 </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div></div>
+	      </div>
+                          
+                        
+                       
+ </div></p>
+{% endblock content %}

@@ -1,0 +1,83 @@
+
+{% extends "layouts/auth-default.html" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block divclass %} auth-bg-1 {% endblock divclass %}
+
+{% block content %}
+
+    <div class="row w-100">
+        <div class="col-lg-4 mx-auto">
+            <div class="auto-form-wrapper">
+            
+            <center>
+                <h2 class="text-center mb-4">Login</h2>
+
+                {% if msg %}
+                    <span class="text-danger">{{ msg | safe }}</span>
+                {% else %}
+                    Use default credentials: <strong>test / pass</strong>
+                    <br />
+                    OR <a href="{{ url_for('register') }}" >create your own user</a>                    
+                {% endif %}
+                
+            </center>
+
+            <br />    
+            <form method="post" action="">
+
+                {{ form.hidden_tag() }}
+
+                <div class="form-group">
+                <label class="label">Username</label>
+                <div class="input-group">
+                    {{ form.username(placeholder="Username",class="form-control") }}
+                    <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                    </span>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="label">Password</label>
+                <div class="input-group">
+                    {{ form.password(placeholder="Password",class="form-control",type="password") }}
+                    <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="mdi mdi-check-circle-outline"></i>
+                    </span>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary submit-btn btn-block">Login</button>
+                </div>
+                <div class="form-group d-flex justify-content-between">
+                <div class="form-check form-check-flat mt-0">
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" checked> Keep me signed in </label>
+                </div>
+                <a href="#" class="text-small forgot-password text-black">Forgot Password</a>
+                </div>
+
+                
+                <div class="text-block text-center my-3">
+                <span class="text-small font-weight-semibold">Not a member?</span>
+                <a href="/register.html" class="text-black text-small">Create new account</a>
+                </div>
+            </form>
+            </div>
+            <ul class="auth-footer">
+
+            </ul>
+            <p class="footer-text text-center">
+            © 2020 - <a class="text-white" href="http://www.supcom.mincom.tn/Fr/accueil_46_3">Sup'Com</a>
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

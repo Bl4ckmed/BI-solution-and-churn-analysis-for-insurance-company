@@ -1,0 +1,60 @@
+
+{% extends "layouts/default.html" %}
+
+{% block title %} UI Elements {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+            
+	  
+	   
+            
+                    <div class="card">
+                      <div class="card-body">
+
+                            <div class="card card-user">
+                                <div class="card-image">
+                                    <img class="img-s rounded-circle" src="{{ current_user.avatar(128) }}" >
+                                </div>
+                                <div class="card-body">
+                                    <div class="author">
+                                        <h1 class="description text-center">  Username: {{  current_user.user }}</h1>
+                                        
+										<p class="description text-center">
+                                        {{ current_user.about_me}}
+                                    </p>
+									<p class="description text-center">
+                                        Job: {{ current_user.job}}
+                                    </p>
+									
+                                    </div>
+                                    <p class="description text-center">
+                                        Email address: {{ current_user.email}}
+                                    </p>
+									<p class="description text-center">
+                                        Last seen on: {{ current_user.last_seen}}
+                                    </p>
+									<p class="description text-center">
+                                        Location: {{ current_user.localisation}}
+                                    </p>
+									
+									
+                                </div>
+                                <hr>
+                               
+                            </div>
+                        </div>	
+                       </div>
+                    </div
+		
+                 
+				
+							
+              
+              
+            
+
+
+{% endblock content %}

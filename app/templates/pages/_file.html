@@ -1,0 +1,28 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} UI Elements {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ current_user.avatar(128) }}"></td>
+            <td><h1>User: {{ current_user.user }}</h1></td>
+        </tr>
+    </table>
+    <hr>
+    {% for file in files %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ file.current_user.avatar(36) }}"></td>
+            <td>
+                <a href="{{ url_for('user', username=file.current_user.user) }}">
+                    {{ file.current_user.user }}
+                </a>
+                says:<br>{{ file.filename }}
+            </td>
+        </tr>
+    </table>>
+    {% endfor %}
+{% endblock %}
